@@ -1,4 +1,4 @@
-// Last updated: 04/08/2026, 09:47:34
+// Last updated: 04/08/2026, 09:52:05
 1class Solution {
 2    int n;
 3    boolean[][] is_palindrome;
