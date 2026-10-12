@@ -1,26 +1,24 @@
-// Last updated: 30/07/2026, 22:08:33
+// Last updated: 12/10/2026, 06:24:43
 1class Solution {
-2    public int[] twoSum(int[] numbers, int target) 
-3    {
-4        int n = numbers.length;
-5        int L = 0;
-6        int R = n-1;
-7
-8        while(L < R)
-9        {
-10            
-11        int sum = numbers[L] + numbers[R];
-12            if(sum == target) 
+2    public int[] twoSum(int[] numbers, int target) {
+3        int left=0;
+4        int right=numbers.length-1;
+5
+6        while(left<right){
+7            int result=numbers[left]+numbers[right];
+8            if(result==target)
+9            {
+10                return new int[]{left+1,right+1};
+11            }
+12            else if(result<target)
 13            {
-14                return new int[]{L+1, R+1};
+14                left++;
 15            }
-16            else if(sum > target) {
-17                R--;
-18            }
-19            else {
-20                L++;
-21            }
-22        }
-23        return new int[]{-1, -1};
-24    }
-25}
+16            else
+17            {
+18                right--;
+19            }
+20        }
+21        return new int[]{};
+22    }
+23}
